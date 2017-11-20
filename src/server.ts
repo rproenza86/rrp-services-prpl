@@ -2,6 +2,7 @@
  * Module dependencies.
  */
 import * as express from "express";
+import * as prpl from "prpl-server";
 import * as compression from "compression";  // compresses requests
 import * as session from "express-session";
 import * as bodyParser from "body-parser";
@@ -73,17 +74,23 @@ app.use((req, res, next) => {
  res.locals.user = req.user;
  next();
 });
-app.use(express.static(path.join(__dirname, "public"), { maxAge: 31557600000 }));
+// app.use(express.static(path.join(__dirname, "public"), { maxAge: 31557600000 }));
 
 /**
  * Primary app routes.
  */
-app.get("/", homeController.index);
 
 /**
  * API examples routes.
  */
-app.get("/api", apiController.getApi);
+app.get("/api/heartbeat", (req, res, next) => apiController.getApi(req, res));
+
+app.get("/*", prpl.makeHandler("./src/public/", {
+  builds: [
+    {name: "es6-unbundled", browserCapabilities: ["es2015", "push"]},
+    {name: "es6-bundled"},
+  ],
+}));
 
 /**
  * Error Handler. Provides full stack - remove for production

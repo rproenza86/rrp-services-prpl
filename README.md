@@ -12,6 +12,17 @@ git clone --depth=1 https://github.com/rproenza86/rrp-services-prpl.git <project
 cd <project_name>
 npm install
 ```
+- Copy your builds directory to `src/public/`
+```
+cp -R /build/source src/public/ 
+```
+- Update the directory names and others options in the `builds` array param of the function `prpl.makeHandler`:
+```
+server.ts file
+```
+```
+line 89
+```
 - Build and run the project
 ```
 npm start

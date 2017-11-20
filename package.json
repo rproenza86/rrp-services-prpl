@@ -1,5 +1,5 @@
 {
-  "name": "rrp-services-prpl",
+  "name": "@rproenza/rrp-services-prpl",
   "version": "1.0.0",
   "description": "Express web server to make differential serve according with the clients capabilities",
   "main": "index.js",
@@ -70,6 +70,7 @@
     "passport": "0.3.2",
     "passport-facebook": "^2.1.1",
     "passport-local": "^1.0.0",
+    "prpl-server": "^1.0.0",
     "pug": "^2.0.0-beta6",
     "request": "^2.78.0"
   },
