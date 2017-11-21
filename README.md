@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/rproenza86/rrp-services-prpl.svg?branch=feature%2Fnpm-deploy)](https://travis-ci.org/rproenza86/rrp-services-prpl)
+[![npm version](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/@rproenza/rrp-services-prpl)
+
 
 # ExpressJS + TypeScript Node Server
 
