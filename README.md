@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/rproenza86/rrp-services-prpl.svg?branch=feature%2Fnpm-deploy)](https://travis-ci.org/rproenza86/rrp-services-prpl)
-[![npm version](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/@rproenza/rrp-services-prpl)
+[![npm (scoped)](https://img.shields.io/npm/v/@rproenza/rrp-services-prpl.svg)](https://www.npmjs.com/package/@rproenza/rrp-services-prpl)
+[![npm](https://img.shields.io/npm/dt/@rproenza/rrp-services-prpl.svg)](https://www.npmjs.com/package/@rproenza/rrp-services-prpl)
+[![license](https://img.shields.io/github/license/rproenza86/rrp-services-prpl.svg)](https://github.com/rproenza86/rrp-services-prpl/blob/master/LICENSE)
 
 
 # ExpressJS + TypeScript Node Server
