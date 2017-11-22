@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/rproenza86/rrp-services-prpl.svg?branch=feature%2Fnpm-deploy)](https://travis-ci.org/rproenza86/rrp-services-prpl)
+[![Dependency Status](https://www.versioneye.com/user/projects/5a14c0130fb24f2a6c0d320e/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/5a14c0130fb24f2a6c0d320e)
 [![npm (scoped)](https://img.shields.io/npm/v/@rproenza/rrp-services-prpl.svg)](https://www.npmjs.com/package/@rproenza/rrp-services-prpl)
 [![npm](https://img.shields.io/npm/dt/@rproenza/rrp-services-prpl.svg)](https://www.npmjs.com/package/@rproenza/rrp-services-prpl)
 [![license](https://img.shields.io/github/license/rproenza86/rrp-services-prpl.svg)](https://github.com/rproenza86/rrp-services-prpl/blob/master/LICENSE)
