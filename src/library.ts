@@ -66,7 +66,6 @@ const serverLibrary = (params: IServerLibraryParams ) => {
         next();
     });
 
-
     /**
      * Kill the server after ended the test
      */
