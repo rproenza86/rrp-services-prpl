@@ -359,7 +359,6 @@ In that file you'll find two sections:
 | dotenv                          | Loads environment variables from .env file.                           |
 | errorhandler                    | Express 4 middleware.                                                 |
 | express                         | Node.js web framework.                                                |
-| express-flash                   | Provides flash messages for Express.                                  |
 | express-session                 | Express 4 middleware.                                                 |
 | express-validator               | Easy form validation for Express.                                     |
 | fbgraph                         | Facebook Graph API library.                                           |
