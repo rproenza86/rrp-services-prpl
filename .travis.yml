@@ -1,14 +1,15 @@
 language: node_js
-node_js: '8'
-services:
-- mongodb
-script:
-- npm run build
-- npm run test
-deploy:
-  provider: npm
-  email: rproenza86@gmail.com
-  api_key:
-    secure: sgbgUyKXBpR9SnJsdTcdGk+yI7EagMGRaj6qMdCDISRN347c+LAJQVX48XEGoeeH5HVISBZqIBtW2x2ePULOdBhERofMizB9FQ5TCxMVHka3uVnf+suQWh2H91ulXOr1yQiZ2JP6af8A1z7iJ62lzW+XY6Giu2bh7eXYUk2iNiUzQeicSm8YDeVaTMWcsOfWxLpvpRQwVxvUVtC/DSYXjCh6PiRPb9nAvYUD+9fR/QiPJoAkrgHOPFwWCmzO1Nhpw20noOWkxvTruHR/yPWKXY39yyCsY2568XLL41YrDfP8ulJ6m+7PdNfIJpQGnOMh83wxqd/StIUjE3bLTkz9ArTeckKwNzMSYR+rpvbzLnEcjSWfva730Fkh8KjXc5wWIM2uWBuOZiUKQMoOBg62UGJwuPk4DskrG/ifyQ3hae12MHq92cZfY4jK2dPCK1d/QKz9yUhwxYUfwzZ+BGhfYZT67WgqmDrf0LqzTghKO+nARm/JknYO89xafwySA9GyAHbr5WZjHOXbHZe5rMVDzXh9qFSFmGoQoHlrN+GPuYyvJ1Z3VElxWUSJE0QK3wWDjxGi30lyvdUkfnLPPITmHRyM654B8fKBOgCTwSO12BVCwFrucNzgW5WP/gBnfCGEOcGa8MG7VG/gWIbS31iI0HSLMbFlDrXqE5OI4+EFI5s=
-  on:
-    branch: master
+cache:
+  directories:
+    - ~/.npm
+notifications:
+  email: false
+node_js:
+  - '9'
+  - '8'
+  - '6'
+after_success:
+  - npm run semantic-release
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/

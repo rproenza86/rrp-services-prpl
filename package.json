@@ -1,6 +1,6 @@
 {
   "name": "@rproenza/rrp-services-prpl",
-  "version": "2.0.0",
+  "version": "0.0.0-development",
   "description": "Express web server to make differential serve according with the clients capabilities",
   "main": "index.js",
   "scripts": {
@@ -15,11 +15,12 @@
     "copy-static-assets": "node copyStaticAssets.js",
     "debug": "npm run build && npm run watch-debug",
     "serve-debug": "nodemon --inspect dist/server.js",
-    "watch-debug": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"npm run watch-ts\" \"npm run serve-debug\""
+    "watch-debug": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"npm run watch-ts\" \"npm run serve-debug\"",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rproenza86/rrp-services-prpl.git"
+    "url": "https://github.com/rproenza86/rrp-services-prpl.git"
   },
   "keywords": [
     "node",
@@ -103,6 +104,7 @@
     "supertest": "^3.0.0",
     "ts-jest": "^21.2.1",
     "tslint": "^5.0.0",
-    "typescript": "^2.4.0"
+    "typescript": "^2.4.0",
+    "semantic-release": "^8.2.0"
   }
 }

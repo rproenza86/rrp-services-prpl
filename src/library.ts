@@ -55,16 +55,26 @@ const serverLibrary = (params: IServerLibraryParams ) => {
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(expressValidator());
     app.use(session({
-    resave: true,
-    saveUninitialized: true,
-    secret: process.env.SESSION_SECRET
+        resave: true,
+        saveUninitialized: true,
+        secret: process.env.SESSION_SECRET
     }));
     app.use(lusca.xframe("SAMEORIGIN"));
     app.use(lusca.xssProtection(true));
     app.use((req, res, next) => {
-    res.locals.user = req.user;
-    next();
+        res.locals.user = req.user;
+        next();
     });
+
+
+    /**
+     * Kill the server after ended the test
+     */
+    if ( process.env["NODE_ENV"] === "test") {
+        setTimeout(function() {
+            process.exit(-1);
+        }, 3000);
+    }
 
     /**
      * Primary app routes.
@@ -96,8 +106,8 @@ const serverLibrary = (params: IServerLibraryParams ) => {
      * Start Express server.
      */
     app.listen(app.get("port"), () => {
-    console.log(("  App is running at http://localhost:%d in %s mode"), app.get("port"), app.get("env"));
-    console.log("  Press CTRL-C to stop\n");
+        console.log(("  App is running at http://localhost:%d in %s mode"), app.get("port"), app.get("env"));
+        console.log("  Press CTRL-C to stop\n");
     });
 
     // return { name: app.name };
