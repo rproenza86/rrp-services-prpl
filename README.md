@@ -38,7 +38,7 @@ server.startServer(port, builsPath, buildsConfig);
 ```
 git clone --depth=1 https://github.com/rproenza86/rrp-services-prpl.git <project_name>
 ```
-- Install dependencies
+- Install dependencies 
 ```
 cd <project_name>
 npm install
