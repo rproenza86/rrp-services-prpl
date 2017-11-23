@@ -9,4 +9,4 @@ describe("GET /random-url", () => {
   });
 });
 
-// TODO : deprecate jest test
+// TODO : deprecate jest test soon!
