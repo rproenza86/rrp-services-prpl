@@ -21,6 +21,24 @@
             ],
             "preLaunchTask": "npm: build",
             "protocol": "inspector"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Jest Tests",
+            "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
+            "args": [
+                "-i"
+            ],
+            //"preLaunchTask": "clientbuild",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outFiles": [
+                "${workspaceRoot}/dist/**/**/*"
+            ],
+            "env": {
+                "NODE_ENV": "local",
+                "API_ENV": "dev"
+            }
         }
     ]
 }

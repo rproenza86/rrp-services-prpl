@@ -1,15 +1,38 @@
+# @rproenza/rrp-services-prpl
+
+> Serve different versions of your prpl app application to different browsers by detecting browser capabilities using the user-agent header.
+
+> Special focus in Progressive Web Apps and Polymer Web Apps.
+
+> Serve [PRPL](https://developers.google.com/web/fundamentals/performance/prpl-pattern/) apps in production.
+
+# ExpressJS + TypeScript Node Server
+
 [![Build Status](https://travis-ci.org/rproenza86/rrp-services-prpl.svg?branch=feature%2Fnpm-deploy)](https://travis-ci.org/rproenza86/rrp-services-prpl)
 [![Dependency Status](https://www.versioneye.com/user/projects/5a14ca6e0fb24f2a6d408d11/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/5a14ca6e0fb24f2a6d408d11)
 [![npm (scoped)](https://img.shields.io/npm/v/@rproenza/rrp-services-prpl.svg)](https://www.npmjs.com/package/@rproenza/rrp-services-prpl)
 [![npm](https://img.shields.io/npm/dt/@rproenza/rrp-services-prpl.svg)](https://www.npmjs.com/package/@rproenza/rrp-services-prpl)
 [![license](https://img.shields.io/github/license/rproenza86/rrp-services-prpl.svg)](https://github.com/rproenza86/rrp-services-prpl/blob/master/LICENSE)
 
+## Usage as a library
 
-# ExpressJS + TypeScript Node Server
+```js
+const server = require('@rproenza/rrp-services-prpl')
 
-An HTTP server designed to serve [PRPL](https://developers.google.com/web/fundamentals/performance/prpl-pattern/) apps in production.
+const port = 8787;
+const builsPath = "./src/public/";
+const buildsConfig = [
+        {name: "es6-unbundled", browserCapabilities: ["es2015", "push"]},
+        {name: "es6-bundled"},
+    ];
 
-# Getting started
+server.startServer(port, builsPath, buildsConfig);
+
+// output : App is running at http://localhost:8787 in development mode
+```
+## Usage as a server
+
+### Getting started
 - Clone the repository
 ```
 git clone --depth=1 https://github.com/rproenza86/rrp-services-prpl.git <project_name>
