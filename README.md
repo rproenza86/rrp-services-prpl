@@ -9,6 +9,7 @@
 # ExpressJS + TypeScript Node Server
 
 [![Build Status](https://travis-ci.org/rproenza86/rrp-services-prpl.svg?branch=feature%2Fnpm-deploy)](https://travis-ci.org/rproenza86/rrp-services-prpl)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![Dependency Status](https://www.versioneye.com/user/projects/5a14ca6e0fb24f2a6d408d11/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/5a14ca6e0fb24f2a6d408d11)
 [![npm (scoped)](https://img.shields.io/npm/v/@rproenza/rrp-services-prpl.svg)](https://www.npmjs.com/package/@rproenza/rrp-services-prpl)
 [![npm](https://img.shields.io/npm/dt/@rproenza/rrp-services-prpl.svg)](https://www.npmjs.com/package/@rproenza/rrp-services-prpl)
