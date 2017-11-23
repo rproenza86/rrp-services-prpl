@@ -1,5 +1,7 @@
 # @rproenza/rrp-services-prpl
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/rproenza86/rrp-services-prpl.svg)](https://greenkeeper.io/)
+
 > Serve different versions of your prpl app application to different browsers by detecting browser capabilities using the user-agent header.
 
 > Special focus in Progressive Web Apps and Polymer Web Apps.
