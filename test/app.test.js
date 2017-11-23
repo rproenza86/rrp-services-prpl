@@ -2,6 +2,8 @@ const chai = require("chai");
 const expect = require("chai").expect;
 const server = require("./../dist/library");
 
+process.env['NODE_ENV'] = 'test';
+
 const serverParams = {
   newPort: 3000,
   newBuildsPath: "./src/public/",
