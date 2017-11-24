@@ -16,7 +16,7 @@ const serverParams = {
 
 let appServer = server(serverParams);
 
-describe("Library app test", function() {
+describe("Sever app test", function() {
     describe("Server full params configuration", function() {
         it("The server name is app", function() {
           expect( appServer.name ).to.equal('app');
