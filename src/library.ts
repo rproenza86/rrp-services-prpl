@@ -16,6 +16,7 @@ import * as passport from "passport";
 import expressValidator = require("express-validator");
 import * as apiController from "./controllers/api";
 import * as capabilities from "browser-capabilities";
+import { timeout } from "async";
 
 interface IServerLibraryParams {
     newPort: number;
@@ -26,14 +27,33 @@ interface IServerLibraryParams {
       }[];
 }
 
+const areParamsValid = (params: IServerLibraryParams ) => {
+    const {
+        newPort,
+        newBuildsPath
+    } = params;
+    if (!newPort || !newBuildsPath) return false;
+    else return true;
+};
+
+const killServer = (timeout: number) => {
+    setTimeout(function() {
+        process.exit(-1);
+    }, timeout);
+};
+
 const serverLibrary = (params: IServerLibraryParams ) => {
+    if (!areParamsValid(params)) {
+        killServer(1000);
+        return "Invalid configuration";
+    }
+
+
     const {
         newPort,
         newBuildsPath,
         buildsConfig
     } = params;
-
-    if (!newPort || !newBuildsPath) return "Invalid configuration";
 
     /**
      * Load environment variables from .env file, where API keys and passwords are configured.
@@ -61,18 +81,12 @@ const serverLibrary = (params: IServerLibraryParams ) => {
     }));
     app.use(lusca.xframe("SAMEORIGIN"));
     app.use(lusca.xssProtection(true));
-    app.use((req, res, next) => {
-        res.locals.user = req.user;
-        next();
-    });
 
     /**
      * Kill the server after ended the test
      */
     if ( process.env["NODE_ENV"] === "test") {
-        setTimeout(function() {
-            process.exit(-1);
-        }, 3000);
+        killServer(3000);
     }
 
     /**
