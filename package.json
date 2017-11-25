@@ -1,6 +1,6 @@
 {
   "name": "@rproenza/rrp-services-prpl",
-  "version": "2.0.1",
+  "version": "2.1.1",
   "description": "Express web server to make differential serve according with the clients capabilities",
   "main": "index.js",
   "scripts": {
