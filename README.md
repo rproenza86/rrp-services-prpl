@@ -64,4 +64,4 @@ npm start
 Navigate to `http://localhost:3000`
 
 ## Project Structure
-Check the `README_EXPANDED.md` file.
+Check the `README_EXPANDED.md` file .
