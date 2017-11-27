@@ -77,7 +77,7 @@ const serverLibrary = (params: IServerLibraryParams ) => {
     app.use(session({
         resave: true,
         saveUninitialized: true,
-        secret: process.env.SESSION_SECRET
+        secret: process.env.SESSION_SECRET || "kakaGrande$@$_3432b5@#52"
     }));
     app.use(lusca.xframe("SAMEORIGIN"));
     app.use(lusca.xssProtection(true));

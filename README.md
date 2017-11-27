@@ -63,5 +63,8 @@ npm start
 ```
 Navigate to `http://localhost:3000`
 
+## Environment variables
+ - For the user session you can setup the environment variable `SESSION_SECRET`
+
 ## Project Structure
 Check the `README_EXPANDED.md` file .
